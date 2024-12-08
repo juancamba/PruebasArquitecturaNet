@@ -1,5 +1,19 @@
-https://chatgpt.com/c/67548c39-1b00-8008-aa9c-9b2cbc3da6a7
+# Ejemplo con Yarp
+En este ejemplo tenemos 3 proyectos gatewayapi, productsapi y userapi.
 
-https://www.youtube.com/watch?v=UidT7YYu97s
+Repositorio: https://github.com/juancamba/PruebasArquitecturaNet/tree/main/Gateway
+
+El patrón geteway nos permite quitar esa logica de decisión e implementarla como un reverse proxy. De esta forma siempre estoy llamado al mismo servidor ( el Gateway) y este se encarga de enrutar al api correspondiente. Para saberlo lo que hace un un trozo de la url:
+
+
+```
+# llamar al api de productos
+http://localhost:9000/productsapi/api/Products?productid=1
+
+# llamar al api de usuarios
+http://localhost:9000/userapi/api/Users?userid=1
+```
+
+En el appsettings definimos la rutas y el cluster. Lo que hace en este caso es usar la red de docker ya que este ejemplo es con docker, para definir lo que seria el path por el cual diferencia cada una de las apis
 
 https://microsoft.github.io/reverse-proxy/articles/getting-started.html
