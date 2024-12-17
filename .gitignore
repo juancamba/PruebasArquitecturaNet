@@ -1,3 +1,14 @@
+# dependencies
+**/node_modules
+**/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
 # Ignore all bin, obj, and project.lock.json files recursively
 **/bin/
 **/obj/
